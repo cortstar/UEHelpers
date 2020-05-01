@@ -50,5 +50,15 @@ public static class VectorHelper
     {
         return c(v.x) && c(v.y);
     }
+    
+    /// <summary>
+    /// Rounds a vector since rotations can sometimes cause odd positions
+    /// </summary>
+    /// <param name="v"></param>
+    /// <returns></returns>
+    public static Vector2 Round(this Vector2 v)
+    {
+        return v.ComponentWise(Mathf.Round);
+    }
 
 }

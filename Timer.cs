@@ -37,6 +37,7 @@ public class Timer {
     public void Reset()
     {
         IsComplete = false;
+        _paused = false;
         RemainingTime = StartingTime;
     }
 	

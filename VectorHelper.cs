@@ -24,7 +24,7 @@ public static class VectorHelper
     /// <param name="v">The vector to operate on</param>
     /// <param name="c">The operation to perform (ComponentOperation - single float parameter, returns float).</param>
     /// <returns></returns>
-    public static Vector2 ComponentWise(this Vector2 v, ComponentOperation c)
+    public static Vector2 Componentwise(this Vector2 v, ComponentOperation c)
     {
         return new Vector2( c(v.x), c(v.y) );
     }
@@ -58,7 +58,12 @@ public static class VectorHelper
     /// <returns></returns>
     public static Vector2 Round(this Vector2 v)
     {
-        return v.ComponentWise(Mathf.Round);
+        return v.Componentwise(Mathf.Round);
+    }
+
+    public static Vector3 Round(this Vector3 v)
+    {
+        return v.Componentwise(Mathf.Round);
     }
 
 }

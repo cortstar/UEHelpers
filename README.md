@@ -25,3 +25,4 @@ Just a standard timer class. The class using Timer.cs should manually update the
 Provides extension methods for Unity's `Vector2` and `Vector3` structs.
 * `Vector2/Vector3.Componentwise(ComponentOperation  c)`: Perform an action on each component of the vector and return the resultant.
 * `Vector2/Vector3.Componentwise(ComponentConditionCheck c)`: Validate that each component of the vector meets some condition `c`, for instance `x => x > 0`
+* `Vector2/Vector3.Round()`: Rounds the components of a vector to an round number (i.e. (1.1, 2.1, 3.1) -> (1,2,3))

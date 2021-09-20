@@ -13,6 +13,11 @@ public class Timer {
     public float RemainingTime { get; private set; }
     public float StartingTime { get; private set; }
 
+    /// <summary>
+    /// returns a float between 0-1 representing the completion amount
+    /// </summary>
+    public float completionPercent => RemainingTime / StartingTime;
+
     private bool _isComplete = false; 
     public bool IsComplete { get { return _isComplete; } private set { _isComplete = value; } }
 
